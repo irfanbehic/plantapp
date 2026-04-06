@@ -1,16 +1,61 @@
-# plantapp
+# PlantApp - Flutter Developer Case Study
 
-A new Flutter project.
+PlantApp is a pixel-perfect, feature-rich Flutter application developed as a recruitment case study. The project demonstrates advanced Flutter development skills, including Clean Architecture, reactive state management with BLoC, and robust networking.
 
-## Getting Started
+## 📱 Features
 
-This project is a starting point for a Flutter application.
+- **Onboarding Experience**: Smooth onboarding flow with persistent state handling.
+- **Dynamic Paywall**: Modern subscription/paywall screen implementation.
+- **Home Dashboard**: Functional home screen with category navigation and search functionality.
+- **Responsive Design**: UI that adapts gracefully to different screen sizes.
+- **Error Handling**: Graceful handling of network states and errors.
 
-A few resources to get you started if this is your first Flutter project:
+## 🏗️ Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The project follows **Clean Architecture** principles to ensure scalability, testability, and maintainability:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Data Layer**: Responsible for external data sources (API with Dio, Local storage with SharedPreferences).
+- **Domain Layer**: Contains the core business logic (Entities, UseCases, Repositories definitions).
+- **Presentation Layer**: UI elements and state management using the BLoC pattern.
+
+## 📦 Tech Stack & Packages
+
+- **State Management**: [flutter_bloc](https://pub.dev/packages/flutter_bloc) for predictable state management.
+- **Routing**: [auto_route](https://pub.dev/packages/auto_route) for strong-typed navigation.
+- **Networking**: [dio](https://pub.dev/packages/dio) for robust HTTP requests.
+- **Data Modeling**: [freezed](https://pub.dev/packages/freezed) and [json_serializable](https://pub.dev/packages/json_serializable) for type-safe models.
+- **Local Storage**: [shared_preferences](https://pub.dev/packages/shared_preferences) for simple persistence.
+- **UI & Styling**: [google_fonts](https://pub.dev/packages/google_fonts) and [flutter_svg](https://pub.dev/packages/flutter_svg).
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd plantapp
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   flutter pub get
+   ```
+
+3. **Generate code (Freezed & AutoRoute)**:
+   ```bash
+   flutter pub run build_runner build --delete-conflicting-outputs
+   ```
+
+4. **Run the project**:
+   ```bash
+   flutter run
+   ```
+
+## 🧪 Testing
+
+The project includes unit and bloc tests:
+```bash
+flutter test
+```
+
